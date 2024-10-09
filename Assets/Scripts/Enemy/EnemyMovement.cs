@@ -1,20 +1,31 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    void Update ()
-    {
-        Transform player = FindObjectOfType<PlayerMovement>().transform;
+    private Transform player;
+    private NavMeshAgent navMeshAgent;
+    private EnemyHealth enemyHealth;
+    private PlayerHealth playerHealth;
 
-        if (GetComponent<EnemyHealth>().currentHealth > 0 && player.GetComponent<PlayerHealth>().currentHealth > 0)
+    void Awake()
+    {
+        player = FindObjectOfType<PlayerMovement>().transform.transform;
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        enemyHealth = GetComponent<EnemyHealth>();
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
+
+    void Update()
+    {
+
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
-            GetComponent<NavMeshAgent>().SetDestination (player.position);
+            navMeshAgent.SetDestination(player.position);
         }
         else
         {
-            GetComponent<NavMeshAgent>().enabled = false;
+            navMeshAgent.enabled = false;
         }
     }
 }
