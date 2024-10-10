@@ -22,7 +22,6 @@ public class EnemyHealth : MonoBehaviour
 
     int id_dead = Animator.StringToHash("Dead");
 
-    ObjectPool pool;
 
     void Awake()
     {
@@ -84,7 +83,7 @@ public class EnemyHealth : MonoBehaviour
         rb.isKinematic = true;
         isSinking = true;
         ScoreManager.score += scoreValue;
-        // Destroy(gameObject, 2f);
+        //Destroy(gameObject, 2f);
         gameObject.SetActive(false);
     }
 }

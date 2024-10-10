@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;
@@ -12,28 +12,42 @@ public class PlayerMovement : MonoBehaviour
 
     int id_walking = Animator.StringToHash("IsWalking");
 
+    IA_ playerActions;
+    private Vector2 moveInput;
+    private Vector2 lookInput;
 
     void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
+
+        // Input Actions
+        playerActions = new IA_();
+        playerActions.Player.Enable();
+
+        playerActions.Player.Move.performed += OnMove;
+        playerActions.Player.Move.canceled += OnMove;
+        playerActions.Player.Look.performed += OnLook;
     }
 
     void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        //float h = Input.GetAxisRaw("Horizontal");
+        //float v = Input.GetAxisRaw("Vertical");
 
-        Move(h, v);
+
+
+        Move();
         Turning();
-        Animating(h, v);
+        Animating();
+
     }
 
-    void Move(float h, float v)
+    void Move()
     {
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * speed * Time.deltaTime;
+        Vector3 direction = new Vector3(moveInput.x, 0, moveInput.y).normalized;
+        movement = direction * speed * Time.deltaTime;
 
         playerRigidbody.MovePosition(transform.position + movement);
     }
@@ -53,10 +67,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Animating(float h, float v)
+    void Animating()
     {
-        bool walking = h != 0f || v != 0f;
+        //bool walking = h != 0f || v != 0f;
+        bool walking = moveInput.x != 0f || moveInput.y != 0f;
 
         anim.SetBool(id_walking, walking);
+    }
+
+    private void OnMove(InputAction.CallbackContext ctx)
+    {
+        moveInput = ctx.ReadValue<Vector2>();
+    }
+    void OnLook(InputAction.CallbackContext ctx)
+    {
+
+        lookInput = ctx.ReadValue<Vector2>();
+
     }
 }
