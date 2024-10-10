@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start()
     {
+
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
@@ -22,6 +23,14 @@ public class EnemyManager : MonoBehaviour
 
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
-        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        //Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        GameObject enemy = ObjectPool.SharedInstance.GetPooledEnemy();
+        if (enemy != null)
+        {
+            enemy.transform.position = spawnPoints[spawnPointIndex].position;
+            enemy.transform.rotation = spawnPoints[spawnPointIndex].rotation;
+            enemy.SetActive(true);
+        }
     }
+
 }
