@@ -3,12 +3,13 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static int score = 0;
+    //public static int score = 0;
     [SerializeField] Text text;
 
+    public ScoreData scoreData;
 
     void Update()
     {
-        text.text = "Score: " + score;
+        text.text = "Score: " + scoreData.amount.ToString();
     }
 }

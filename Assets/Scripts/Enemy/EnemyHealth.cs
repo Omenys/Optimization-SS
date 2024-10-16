@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-
 public class EnemyHealth : MonoBehaviour
 {
     public int startingHealth = 100;
@@ -17,11 +16,11 @@ public class EnemyHealth : MonoBehaviour
     NavMeshAgent navMeshAgent;
     Rigidbody rb;
 
+    ScoreManager scoreManager;
     bool isDead;
     bool isSinking;
 
     int id_dead = Animator.StringToHash("Dead");
-
 
     void Awake()
     {
@@ -31,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
-
+        scoreManager = FindObjectOfType<ScoreManager>();
         currentHealth = startingHealth;
     }
 
@@ -82,7 +81,7 @@ public class EnemyHealth : MonoBehaviour
         navMeshAgent.enabled = false;
         rb.isKinematic = true;
         isSinking = true;
-        ScoreManager.score += scoreValue;
+        scoreManager.scoreData.amount += scoreValue;
         //Destroy(gameObject, 2f);
         gameObject.SetActive(false);
     }
