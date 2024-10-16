@@ -842,6 +842,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
+--- !u!1 &737127866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1873466918661584, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1299572195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &774119032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1450,23 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
         type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 1299572207}
+    - target: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+        type: 3}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: a6abc37059e98df478f515b0b9c59b84,
+        type: 2}
+    - target: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+        type: 3}
+      propertyPath: currHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: 4edf85d90452c474cb625400c6c1fd4c,
+        type: 2}
+    - target: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+        type: 3}
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 152261544}
@@ -1460,7 +1483,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1873466918661584, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299572207}
   m_SourcePrefab: {fileID: 100100000, guid: 9e3e72cd89ef44f97afe08f9baaabc18, type: 3}
 --- !u!114 &1299572197 stripped
 MonoBehaviour:
@@ -1468,7 +1495,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1299572195}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 737127866}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
@@ -1480,6 +1507,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1299572195}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299572207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737127866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d981574071900a147b91191409931bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 604563092}
+  damageImage: {fileID: 152261544}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!1 &1456155939
 GameObject:
   m_ObjectHideFlags: 0

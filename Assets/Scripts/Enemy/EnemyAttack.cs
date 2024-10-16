@@ -13,6 +13,8 @@ public class EnemyAttack : MonoBehaviour
     bool playerInRange;
     float timer;
 
+    HealthData health;
+
     int id_playerDead = Animator.StringToHash("PlayerDead");
     void Awake()
     {
@@ -50,7 +52,7 @@ public class EnemyAttack : MonoBehaviour
             Attack();
         }
 
-        if (playerHealth.currentHealth <= 0)
+        if (playerHealth.currHealth.amount <= 0)
         {
             anim.SetTrigger(id_playerDead);
         }
@@ -61,7 +63,7 @@ public class EnemyAttack : MonoBehaviour
     {
         timer = 0f;
 
-        if (playerHealth.currentHealth > 0)
+        if (playerHealth.currHealth.amount > 0)
         {
             playerHealth.TakeDamage(attackDamage);
         }

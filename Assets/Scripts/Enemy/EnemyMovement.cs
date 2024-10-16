@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
 
-        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        if (enemyHealth.currentHealth > 0 && playerHealth.currHealth.amount > 0)
         {
             navMeshAgent.SetDestination(player.position);
         }

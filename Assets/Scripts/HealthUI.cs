@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    public PlayerHealth health;
+    // public PlayerHealth health;
     public Slider healthSlider;
     public Image damageImage;
     public float flashSpeed = 5f;
