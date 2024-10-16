@@ -7,6 +7,8 @@ public class EnemyManager : MonoBehaviour
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
 
+    [SerializeField] ObjectPool pool;
+
 
     void Start()
     {
@@ -24,7 +26,7 @@ public class EnemyManager : MonoBehaviour
         int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
         //Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-        GameObject enemy = ObjectPool.SharedInstance.GetPooledEnemy();
+        GameObject enemy = pool.GetPooledEnemy();
         if (enemy != null)
         {
             enemy.transform.position = spawnPoints[spawnPointIndex].position;

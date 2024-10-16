@@ -198,6 +198,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18034249}
   m_CullTransparentMesh: 0
+--- !u!1 &46644759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46644761}
+  - component: {fileID: 46644760}
+  m_Layer: 0
+  m_Name: ZomBearPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &46644760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46644759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb31701ea5f6b7a4db5f5ebdfa04d9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1161934229116340, guid: 78e1368557eab4d62a5487e98c1b5c5f,
+    type: 3}
+  enemyAmount: 30
+--- !u!4 &46644761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46644759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -55.106007, y: 24.609207, z: 149.56293}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &152261542
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +517,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364300062}
   m_CullTransparentMesh: 0
+--- !u!1 &517298056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517298058}
+  - component: {fileID: 517298057}
+  m_Layer: 0
+  m_Name: HellephantPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &517298057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517298056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb31701ea5f6b7a4db5f5ebdfa04d9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1819768538276330, guid: ebed7a3ef4be5458fb88a3c3a689c566,
+    type: 3}
+  enemyAmount: 30
+--- !u!4 &517298058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517298056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -55.106007, y: 24.609207, z: 149.56293}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598742632
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +842,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
+--- !u!1 &774119032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774119034}
+  - component: {fileID: 774119033}
+  m_Layer: 0
+  m_Name: ZomBunnyPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &774119033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774119032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb31701ea5f6b7a4db5f5ebdfa04d9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1719079804300652, guid: 4e3b7f611582d4dc7a9dd318242ed5e3,
+    type: 3}
+  enemyAmount: 30
+--- !u!4 &774119034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774119032}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -55.106007, y: 24.609207, z: 149.56293}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072118398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,8 +1938,6 @@ GameObject:
   - component: {fileID: 2135234547}
   - component: {fileID: 2135234550}
   - component: {fileID: 2135234549}
-  - component: {fileID: 2135234552}
-  - component: {fileID: 2135234551}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -1823,6 +1962,7 @@ MonoBehaviour:
   spawnTime: 3
   spawnPoints:
   - {fileID: 1456155940}
+  pool: {fileID: 774119033}
 --- !u!4 &2135234548
 Transform:
   m_ObjectHideFlags: 0
@@ -1855,6 +1995,7 @@ MonoBehaviour:
   spawnTime: 10
   spawnPoints:
   - {fileID: 694235421}
+  pool: {fileID: 517298057}
 --- !u!114 &2135234550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1872,37 +2013,7 @@ MonoBehaviour:
   spawnTime: 3
   spawnPoints:
   - {fileID: 1084502847}
---- !u!114 &2135234551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135234546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb31701ea5f6b7a4db5f5ebdfa04d9ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1819768538276330, guid: ebed7a3ef4be5458fb88a3c3a689c566,
-    type: 3}
-  enemyAmount: 20
---- !u!114 &2135234552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135234546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df8e23f7b8fee541958096c01b5f946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1719079804300652, guid: 4e3b7f611582d4dc7a9dd318242ed5e3,
-    type: 3}
-  enemyAmount: 20
-  pooledEnemies: []
+  pool: {fileID: 46644760}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1920,3 +2031,6 @@ SceneRoots:
   - {fileID: 1084502847}
   - {fileID: 694235421}
   - {fileID: 339976524}
+  - {fileID: 517298058}
+  - {fileID: 774119034}
+  - {fileID: 46644761}

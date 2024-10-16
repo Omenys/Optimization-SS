@@ -1,25 +1,31 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
-
 public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;
     public int currentHealth;
-    public Slider healthSlider;
+
+    // Moved to Health UI script
+    /*public Slider healthSlider;
     public Image damageImage;
-    public AudioClip deathClip;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    bool damaged;*/
+
+
+    public AudioClip deathClip;
+    public HealthData healthData;
 
 
     Animator anim;
     AudioSource playerAudio;
     PlayerMovement playerMovement;
     PlayerShooting playerShooting;
+
+
     bool isDead;
-    bool damaged;
+
+
 
     int id_die = Animator.StringToHash("Die");
 
@@ -33,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    void Update()
+    /*void Update()
     {
         if (damaged)
         {
@@ -44,16 +50,16 @@ public class PlayerHealth : MonoBehaviour
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
-    }
+    }*/
 
 
     public void TakeDamage(int amount)
     {
-        damaged = true;
-
+        /*damaged = true;
         currentHealth -= amount;
+        healthSlider.value = currentHealth;*/
 
-        healthSlider.value = currentHealth;
+
 
         playerAudio.Play();
 
@@ -84,4 +90,5 @@ public class PlayerHealth : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
 }

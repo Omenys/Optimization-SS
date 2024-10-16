@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool SharedInstance;
+    //public static ObjectPool SharedInstance;
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] int enemyAmount;
 
@@ -11,7 +11,7 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake()
     {
-        SharedInstance = this;
+        //SharedInstance = this;
     }
 
     private void Start()
